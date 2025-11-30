@@ -1,1 +1,6 @@
 Notlarým
+
+-önce enityleri taþýyarak baþladýk enitiylerde iki farklý tablonun ortak tablolarýný eriþtik
+sonra onlarý car car vb. terimler ile çaðýrdýk.
+Sonra db ye mig attýk  Önce core katmaný sonra infrastucture katmanýný oluþturduk sonra da api ile presantaion katmanýný oluþturuk
+
