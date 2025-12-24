@@ -1,6 +1,7 @@
-@CarBook.WebApi_HostAddress = http://localhost:5156
+@CarBook.WebApi_HostAddress = https://localhost:7296/swagger
 
 GET {{CarBook.WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+

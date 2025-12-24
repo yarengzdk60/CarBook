@@ -1,0 +1,50 @@
+﻿CQRS için mantık akışı
+
+CQRS isteği  parçalara böler her parça kendi sorumluluğunu yerine getirir.
+UI den
+{
+   "title": "Biz Kimiz?",
+   "description": "CarBook 2024 yılında kurulmuştur...",
+   "imageUrl": "/img/about1.jpg"
+}
+ bu şekilde bir istek gelir  bu isteği controllerkarşılar
+ controller dış dünyadan gelen isteği alır  ilgili handlere yönlendirir
+ cevabı geri döner.
+ Contoller trafik polisi gibidir. işi yapmaz işi yönlendirir.
+
+ [HttpPost]
+public async Task<IActionResult> CreateAbout(CreateAboutCommand command)
+{
+    var handler = new CreateAboutCommandHandler(_repository);
+    await handler.Handle(command);
+    return Ok("Created");
+}
+kullanıcının gönderdiği jsonu createaboutcommand a içine aktardı
+ sonra handler a gönderir handler işi yapar
+ handler ın içinde repository çağrılır ve veri tabanına ekleme işlemi 
+ yapılır.
+
+ Command veri kalıbıdır işi yapmaz taşır
+
+ Kalp noktası handler dır handler işi yapar
+ commenden gelen verileri alır 
+ enity e dönüştürür
+ veritabanına ekler.
+
+ repository veri tabanı işlemlerini yapar veri tabanı ile konuşan bir kapıdır.
+
+ [1] Kullanıcı JSON gönderir
+       ↓
+[2] Controller isteği alır
+       ↓
+[3] CreateAboutCommand oluşturulur
+       ↓
+[4] CreateAboutCommandHandler çağrılır
+       ↓
+[5] Handler → Entity oluşturur
+       ↓
+[6] Handler → Repository.CreateAsync çağırır
+       ↓
+[7] Repository → DbContext → DB’ye kaydeder
+       ↓
+[8] Controller kullanıcıya cevap döner

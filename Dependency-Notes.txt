@@ -1,0 +1,36 @@
+--Dependendency Injection
+
+
+Þimdi bizim iþlermlerimizi yapabilmek için veritabaný ile konuþmamýz lazým 
+Bunun için repository ihtiyacýmýz var 
+Repository pattern kullanarak veritabaný iþlemlerimizi soyutlayacaðýz.
+
+Service içinde þunu istiyorsun
+
+public ProductService(IProductRepository repo)
+{
+    _repo = repo;
+}
+
+
+Burada repo nereden geliyor?
+
+Onu DI Container veriyor.
+
+Yani sistem diyor ki:
+
+“Birisi IProductRepository isterse ona ProductRepository nesnesini ver.”
+
+Bu yüzden Service ? Interface’e baðlý olur, concrete class’a deðil.
+
+Service  ?  IProductRepository  ?  ProductRepository ? Database
+             ?
+             | (kapý)
+        Dependency Injection
+
+Sen Service olarak interface'e baðlýsýn.
+Repository’nin gerçek implementasyonu arkada deðiþebilir.
+
+Kýsaca Repository direkt baðlanamayýz DI Container bize bir baðlantý kapýsý sunar.
+Bu kapý sayesinde baðýmlýlýklarýmýzý yönetiriz.
+

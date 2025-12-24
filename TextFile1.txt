@@ -4,3 +4,18 @@ Notlarým
 sonra onlarý car car vb. terimler ile çaðýrdýk.
 Sonra db ye mig attýk  Önce core katmaný sonra infrastucture katmanýný oluþturduk sonra da api ile presantaion katmanýný oluþturuk
 
+CQRS  Desing Patern
+-ana odaðý yazma ve okuma iþlemlerini birbirinden ayýrmaktýr.
+-Command Query Responsibility Segregation
+Bir methot objenin durumunu deðiþtirmeli ya da geriye bir sonuç dönmeli .
+Performans artýþý saðlar.
+
+Methotlar ikiye ayrýlýr
+commend: veri üzerinde deðiþiklik yapar select, , update, delete
+query: veri üzerinde deðiþiklik yapmaz sadece veri döner (return) Listeleme özellikleþartlý listeleme problarý
+Handler crud iþlemlerini yapar
+result : Listeleme iþlemlerinde dönen sonuçlarý tutar
+Query : Genelde get ile baþlar getall getbyid gibi
+
+
+Mantýk þemasý Irepositorylerin oluþturduk sonra generic repository oluþturdum
