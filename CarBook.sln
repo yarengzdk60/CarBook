@@ -17,12 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBook.WebApiPersistance",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
+		CQRS-DesingPattern-Notes.txt = CQRS-DesingPattern-Notes.txt
 		Dependency-Notes.txt = Dependency-Notes.txt
 		TextFile1.txt = TextFile1.txt
-		CQRS-DesingPattern-Notes.txt = CQRS-DesingPattern-Notes.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBoorApplication", "Application\CarBoorApplication\CarBoorApplication.csproj", "{6EDD968E-3712-41AC-A5DE-1BFD95F701F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{663F97ED-E695-4D58-88A4-85B027F83443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarUI", "Frontend\CarUI\CarUI.csproj", "{09EA382B-0F17-4571-BEC9-58B33434787E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +50,10 @@ Global
 		{6EDD968E-3712-41AC-A5DE-1BFD95F701F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EDD968E-3712-41AC-A5DE-1BFD95F701F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EDD968E-3712-41AC-A5DE-1BFD95F701F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EA382B-0F17-4571-BEC9-58B33434787E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EA382B-0F17-4571-BEC9-58B33434787E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EA382B-0F17-4571-BEC9-58B33434787E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EA382B-0F17-4571-BEC9-58B33434787E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,7 @@ Global
 		{7FA484CE-0B3C-44E4-A218-7DCA6F0A67DA} = {82305932-E929-48A5-A11A-0FC48D05C9BA}
 		{931AB451-0FC2-4B96-B1F3-2790211DB694} = {B9DB805C-A162-4959-B6D2-C62B4725F331}
 		{6EDD968E-3712-41AC-A5DE-1BFD95F701F5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{09EA382B-0F17-4571-BEC9-58B33434787E} = {663F97ED-E695-4D58-88A4-85B027F83443}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CFC628A6-1CC2-4235-9755-04283B876AE1}
